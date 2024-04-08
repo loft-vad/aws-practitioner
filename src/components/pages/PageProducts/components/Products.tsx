@@ -10,7 +10,7 @@ import { useAvailableProducts } from "~/queries/products";
 import { availableProducts, orders, products, cart } from "~/mocks/data";
 
 export default function Products() {
-  const { data = availableProducts, isLoading } = useAvailableProducts();
+  const { data = [], isLoading } = useAvailableProducts();
 
   if (isLoading) {
     return <Typography>Loading...</Typography>;
