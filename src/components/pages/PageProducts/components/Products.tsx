@@ -7,9 +7,10 @@ import Typography from "@mui/material/Typography";
 import { formatAsPrice } from "~/utils/utils";
 import AddProductToCart from "~/components/AddProductToCart/AddProductToCart";
 import { useAvailableProducts } from "~/queries/products";
+import { availableProducts, orders, products, cart } from "~/mocks/data";
 
 export default function Products() {
-  const { data = [], isLoading } = useAvailableProducts();
+  const { data = availableProducts, isLoading } = useAvailableProducts();
 
   if (isLoading) {
     return <Typography>Loading...</Typography>;
